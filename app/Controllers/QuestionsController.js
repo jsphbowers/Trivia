@@ -10,7 +10,7 @@ export class QuestionsController {
 
     // let data = fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
     // console.log(data)
-
+    this.getQuestions()
   }
 
 
