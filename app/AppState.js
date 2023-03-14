@@ -11,6 +11,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Question').Question[]} */
   // questions = loadState('questions', [Question])
   questions = []
+
+  correct = 0
+  wrong = 0
 }
 
 export const appState = new Proxy(new AppState(), {

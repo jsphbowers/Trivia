@@ -4,6 +4,14 @@ import { Question } from "../Models/Question.js"
 
 
 class QuestionsService {
+  checkAnswer(answerID) {
+    let currentQuestion = appState.questions.find(q => q.correct_answer == answerID)
+    if (answerID = currentQuestion?.correct_answer) {
+      appState.correct++
+    } else {
+      appState.wrong++
+    }
+  }
 
   async getQuestionsWithFetch() {
     let response = await fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
